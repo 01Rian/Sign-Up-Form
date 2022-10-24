@@ -8,6 +8,56 @@
     <title>Sign Up</title>
 </head>
 <body>
-    
+    <div class="main-img">
+        <img src="./assets/halie-west-25xggax4bSA-unsplash.jpg" alt="img">
+        <div class="odin-img">
+            <img src="./assets/odin-lined.png" alt="img">
+            <p>ODIN</p>
+        </div>
+    </div>
+    <div>
+        <div class="paragraph-content">
+            <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <i>now</i> to get started</p>
+            <p>You <i>know</i> you want to.</p>
+        </div>
+        <div class="form-content">
+            <h2>Let’s do this!</h2>
+            <form action="" method="post">
+                <div class="form">
+                    <div class="input-form">
+                        <label for="first_name">First Name</label>
+                        <input type="text" id="first_name" name="first_name" required>
+                    </div>
+                    <div class="input-form">
+                        <label for="last_name">Last Name</label>
+                        <input type="text" id="last_name" name="last_name" required>
+                    </div>
+                    <div class="input-form">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="input-form">
+                        <label for="phone_number">Phone Number</label>
+                        <input type="tel" id="phone_number" name="phone_number" required>
+                    </div>
+                    <div class="input-form">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
+                    </div>
+                    <div class="input-form">
+                        <label for="password_confirm">Confirm Password</label>
+                        <input type="password" id="password_confirm" name="password_confirm" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
+                    </div>
+                </div>
+                <div>
+                    <input type="submit" value="Create Account">
+                </div>
+            </form>
+            <div class="footer">
+                <p>Already have an account?</p>
+                <a href="#">Log in</a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
