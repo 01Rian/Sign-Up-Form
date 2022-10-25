@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+@font-face {
+    font-family: "Norse";
+    src: url(./assets/Norse-Bold.otf);
+}
+
+body {
+    display: flex;
+    overflow: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.main-img > img {
+    width: 550px;
+    height: 100vh;
+}
+
+.odin-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: relative;
+    top: -580px;
+}
+
+.odin-img > img {
+    width: 100px;
+    height: 130px;
+}
+
+.odin-img > p {
+    font-family: 'Norse', 'Roboto', sans-serif;
+    color: white;
+    font-size: 6rem;
+}
+
+.paragraph-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 660px;
+    margin: 80px 0px 40px 52px;
+    font-size: 1.45rem;
+    font-weight: 500;
+}
+
+.form-content > h2 {
+    position: relative;
+    bottom: -40px;
+    left: 55px;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 45px 45px 25px 45px;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.input-form {
+    padding: 10px;
+}
+
+.input-form > label {
+    display: block;
+    text-transform: uppercase;
+    font-size: 0.69rem;
+    font-weight: 500;
+    color: #404040;
+    margin-bottom: 3px;
+    letter-spacing: 0.1em;
+}
+
+.input-form > input {
+    width: 240px;
+    height: 28px;
+    margin-right: 50px;
+    padding-left: 8px;
+    border: 1px solid #E5E7EB;
+    border-radius: 3px;
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+.input-form[data-error]::after {
+    content: attr(data-error);
+    display: block;
+    font-size: 0.69rem;
+    font-weight: 500;
+    color: #DC143C;
+}
+
+.input-form[data-error] > input {
+    outline: none;
+    border: 1px solid #DC143C;
+}
+
+.input-form > input:valid {
+    outline: none;
+    border: 1px solid green;
+}
+
+.input-form > input:focus {
+    outline: none;
+    border: 1px solid #4169E1;
+    box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+}
+
+input[type="submit"] {
+    border: none;
+    padding: 12px 50px;
+    border-radius: 6px;
+    margin: 30px 0px 30px 60px;
+    background-color: #596D48;
+    color: #FFFF;
+    font-weight: 500;
+    font-size: 0.88rem;
+    cursor: pointer;
+    box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+}
+
+.footer {
+    display: flex;
+    gap: 5px;
+    margin-left: 60px;
+    font-weight: 500;
+}
+
+.footer a:link, 
+.footer a:visited {
+    color: #596D48;
+    text-decoration: none;
+    font-weight: 600;
+}

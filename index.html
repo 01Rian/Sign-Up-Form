@@ -34,19 +34,19 @@
                     </div>
                     <div class="input-form">
                         <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
+                        <input type="email" id="email" name="email" placeholder="example@example.com" required>
                     </div>
                     <div class="input-form">
                         <label for="phone_number">Phone Number</label>
                         <input type="tel" id="phone_number" name="phone_number" required>
                     </div>
-                    <div class="input-form">
+                    <div class="input-form" data-error=" * Password do not match">
                         <label for="password">Password</label>
-                        <input type="password" id="password" name="password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
+                        <input type="password" id="password" name="password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" required>
                     </div>
-                    <div class="input-form">
+                    <div class="input-form" data-error="">
                         <label for="password_confirm">Confirm Password</label>
-                        <input type="password" id="password_confirm" name="password_confirm" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
+                        <input type="password" id="password_confirm" name="password_confirm" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" required>
                     </div>
                 </div>
                 <div>
@@ -59,5 +59,10 @@
             </div>
         </div>
     </div>
+    <script defer>
+        document.querySelectorAll('.input-form[data-error] > input').forEach(inpEl => {
+            inpEl.addEventListener('input', () => inpEl.parentElement.removeAttribute('data-error'));
+        });
+    </script>
 </body>
 </html>
