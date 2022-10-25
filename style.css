@@ -22,6 +22,18 @@ body {
     height: 100vh;
 }
 
+.photo-credit {
+    position: relative;
+    top: -180px;
+    left: 175px;
+    color: #E5E7EB;
+    font-size: 0.8rem;
+}
+
+.photo-credit > a {
+    color: #E5E7EB;
+}
+
 .odin-img {
     display: flex;
     align-items: center;
