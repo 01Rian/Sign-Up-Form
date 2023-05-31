@@ -23,7 +23,7 @@
         </div>
         <div class="form-content">
             <h2>Let’s do this!</h2>
-            <form action="" method="post">
+            <form action="" method="post" id="signup-form">
                 <div class="form">
                     <div class="input-form">
                         <label for="first_name">First Name</label>
@@ -51,7 +51,7 @@
                     </div>
                 </div>
                 <div>
-                    <input type="submit" value="Create Account">
+                    <input type="button" value="Create Account" onclick="resetForm()">
                 </div>
             </form>
             <div class="footer">
@@ -61,8 +61,23 @@
         </div>
     </div>
     <script defer>
+        const resetForm = () => {
+            document.getElementById("first_name").value = '';
+            document.getElementById("last_name").value = '';
+            document.getElementById("email").value = '';
+            document.getElementById("phone_number").value = '';
+            document.getElementById("password").value = '';
+            document.getElementById("password_confirm").value = '';
+        };
+        
         document.querySelectorAll('.input-form[data-error] > input').forEach(inpEl => {
-            inpEl.addEventListener('input', () => inpEl.parentElement.removeAttribute('data-error'));
+            inpEl.addEventListener('input', () => {
+                if (inpEl.value.trim() === '') {
+                    inpEl.parentElement.setAttribute('data-error', "* Password do not match");
+                } else {
+                    inpEl.parentElement.removeAttribute('data-error');
+                }
+            });
         });
     </script>
 </body>
